@@ -13,11 +13,11 @@ class Rossmann( object ):
         base_path = os.path.dirname(os.path.abspath(__file__))
         
         # Load the scalers using relative paths
-        self.scaler_competition_distance = pickle.load( open( os.path.join(base_path, '../../parameter/scaler_competition_distance.pkl'), 'rb' ) )
-        self.scaler_competition_time_month = pickle.load( open( os.path.join(base_path, '../../parameter/scaler_competition_time_month.pkl'), 'rb' ) )
-        self.scaler_promo_time_week = pickle.load( open( os.path.join(base_path, '../../parameter/scaler_promo_time_week.pkl'), 'rb' ) )
-        self.scaler_year = pickle.load( open( os.path.join(base_path, '../../parameter/scaler_year.pkl'), 'rb' ) )
-        self.scaler_store_type = pickle.load( open( os.path.join(base_path, '../../parameter/store_type_scaler.pkl'), 'rb' ) )
+        self.scaler_competition_distance = pickle.load( open( 'parameter/scaler_competition_distance.pkl'), 'rb' )
+        self.scaler_competition_time_month = pickle.load( open( 'parameter/scaler_competition_time_month.pkl'), 'rb' )
+        self.scaler_promo_time_week = pickle.load( open( 'parameter/scaler_promo_time_week.pkl'), 'rb' )
+        self.scaler_year = pickle.load( open( 'parameter/scaler_year.pkl'), 'rb' )
+        self.scaler_store_type = pickle.load( open( 'parameter/store_type_scaler.pkl'), 'rb' )
 
     def data_cleaning( self, df1 ):
 
